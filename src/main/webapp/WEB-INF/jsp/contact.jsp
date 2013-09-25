@@ -24,7 +24,7 @@
 <div id="content">
 
 	<h1>Contact Us</h1>
-	<p>You can write to us at <a href="mailto:contact@binaryedu.com">contact@binaryedu.com</a>. 
+	<p>You can write to us at <a href="mailto:binaryedu@gmail.com">binaryedu@gmail.com</a>. 
 	Send us your queries, suggestions, feedback or any problem that you are facing
 	on the web site and we will be glad to respond.</p>
 	

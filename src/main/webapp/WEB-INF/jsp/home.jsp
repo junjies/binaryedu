@@ -37,24 +37,6 @@
 		
 		</table>
 		
-		<table class="sidebarLight">
-		<tr><th>Advertisements</th></tr>
-		<tr><td>
-		<script type="text/javascript"><!--
-		google_ad_client = "pub-2043647560365912";
-		/* 120x240, Default */
-		google_ad_slot = "8714254313";
-		google_ad_width = 120;
-		google_ad_height = 240;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
-		</td></tr>
-		
-		</table>
-		
 </div>
 <!-- Left sidebar end -->
 <div id="content">
@@ -127,24 +109,6 @@
 		<a href="http://twitter.com/binaryedu" target="_blank">Twitter</a><br/>
 		<a href="http://www.orkut.co.in/Main#Profile.aspx?origin=is&uid=3522498695010783549" target="_blank">Orkut</a><br/>
 		<a href="http://labs.google.co.in/smschannels/subscribe/BinaryEdu" target="_blank">Google Channels</a>
-		</td></tr>
-		
-		</table>
-		
-		<table class="sidebarLight">
-		<tr><th>Advertisements</th></tr>
-		<tr><td>
-		<script type="text/javascript"><!--
-		google_ad_client = "pub-2043647560365912";
-		/* 120x240, Default */
-		google_ad_slot = "8714254313";
-		google_ad_width = 120;
-		google_ad_height = 240;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
 		</td></tr>
 		
 		</table>

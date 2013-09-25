@@ -36,24 +36,6 @@
 		<a href="videos.htm?id=10">- Profit &amp; Loss: Part 2</a><br />
 		</td></tr>		
 	</table>
-	
-	<table class="sidebarLight">
-	<tr><th>Advertisements</th></tr>
-	<tr><td>
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-2043647560365912";
-	/* 120x240, Handa */
-	google_ad_slot = "0755957307";
-	google_ad_width = 120;
-	google_ad_height = 240;
-	//-->
-	</script>
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
-	</td></tr>
-	
-	</table>
 </div>
 
 <div id="content">
@@ -160,19 +142,6 @@
 	<tr><td valign="top">Vidoes provided by </td><td valign="top"><a href="http://www.handakafunda.com" target="_blank"><img src="./images/hkf.jpg"/></a></td></tr>
 	</table>
 	
-	<p>
-			<script type="text/javascript"><!--
-			google_ad_client = "pub-2043647560365912";
-			/* 468x60, Handa */
-			google_ad_slot = "5213184856";
-			google_ad_width = 468;
-			google_ad_height = 60;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-			</p>
 </div>
 <div id="right-sidebar">
 	<table class="sidebar" style="margin-top: 25px;">
@@ -185,23 +154,6 @@
 		and <a href="tests.htm?type=FLT">Full Length Mock Tests</a> that simulate the actual CAT exam. 
 		</td></tr>
 		
-	</table>
-	<table class="sidebarLight">
-	<tr><th>Advertisements</th></tr>
-	<tr><td>
-	<script type="text/javascript"><!--
-	google_ad_client = "pub-2043647560365912";
-	/* 120x240, Handa */
-	google_ad_slot = "0755957307";
-	google_ad_width = 120;
-	google_ad_height = 240;
-	//-->
-	</script>
-	<script type="text/javascript"
-	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>
-	</td></tr>
-	
 	</table>
 </div>
 </div>
