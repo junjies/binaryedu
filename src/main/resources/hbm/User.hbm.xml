@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.binaryedu.business.model.impl">
+	<class name="User" table="User">
+		<id name="id" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property name="email" type="java.lang.String" length="64">
+			<column name="EMAIL"/>
+		</property>
+		
+		<property name="name" type="java.lang.String" length="64">
+			<column name="NAME"/>
+		</property>
+			
+		<property name="gender" type="java.lang.String" length="1">
+			<column name="GENDER"/>
+		</property>
+		
+		<property name="dateOfBirth">
+			<column name="DATE_OF_BIRTH"/>
+		</property>
+		
+		<property name="phone" type="java.lang.String" length="32">
+			<column name="PHONE"/>
+		</property>
+	</class>
+	
+</hibernate-mapping>

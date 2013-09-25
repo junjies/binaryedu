@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       
+    <!-- the application context definition for the springapp DispatcherServlet -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    	<property name="basename" value="messages"></property>
+    </bean>
+      
+    <bean name="/home.htm" class="com.binaryedu.web.controllers.HomeController"/>
+    <bean name="/signUpSuccess.htm" class="com.binaryedu.web.controllers.SignUpSuccessController"/>
+    <bean name="/resendVerificationEmailSuccess.htm" class="com.binaryedu.web.controllers.ResendVerificationEmailSuccessController"/>
+    <bean name="/forgotPasswordSuccess.htm" class="com.binaryedu.web.controllers.ResendPasswordSuccessController"/>
+    <bean name="/logout.htm" class="com.binaryedu.web.controllers.LogoutController"/>
+    <bean name="/tests.htm" class="com.binaryedu.web.controllers.TestsController"/>
+    <bean name="/results.htm" class="com.binaryedu.web.controllers.ResultsController"/>
+    <bean name="/detailedResult.htm" class="com.binaryedu.web.controllers.DetailedResultController"/>
+    <bean name="/latestResult.htm" class="com.binaryedu.web.controllers.LatestResultController"/>
+    <bean name="/testapp/latestResult.htm" class="com.binaryedu.web.controllers.TestAppLatestResultController"/>
+    <bean name="/profile.htm" class="com.binaryedu.web.controllers.ProfileController"/>
+    <bean name="/aboutUs.htm" class="com.binaryedu.web.controllers.AboutUsController"/>
+    <bean name="/contact.htm" class="com.binaryedu.web.controllers.ContactController"/>
+    <bean name="/strategies.htm" class="com.binaryedu.web.controllers.StrategiesController"/>
+    <bean name="/howItWorks.htm" class="com.binaryedu.web.controllers.HowItWorksController"/>
+    <bean name="/videos.htm" class="com.binaryedu.web.controllers.VideosController"/>
+    
+    <bean name="/error.htm" class="com.binaryedu.web.controllers.ErrorController"/>
+    
+    <bean name="/showTest.htm" class="com.binaryedu.web.controllers.ShowTestController"/>
+    <bean name="/startTest.htm" class="com.binaryedu.web.controllers.StartTestController"/>
+    <bean name="/activateAccount.htm" class="com.binaryedu.web.controllers.ActivateAccountController"/>
+    <bean name="/resetPassword.htm" class="com.binaryedu.web.controllers.ResetPasswordController"/>
+    
+    <bean name="/signup.htm" class="com.binaryedu.web.controllers.SignUpFormController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="signUp"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.SignUpFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.SignUpValidator"/>
+    	</property>
+    	<property name="formView" value="signup"/>
+    	<property name="successView" value="signUpSuccess.htm"/>
+    </bean>
+    
+     <bean name="/login.htm" class="com.binaryedu.web.controllers.LoginController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="login"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.LoginFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.LoginValidator"/>
+    	</property>
+    	<property name="formView" value="login"/>
+    	<property name="successView" value="home.htm"/>
+    </bean>
+    
+     <bean name="/resendVerificationEmail.htm" class="com.binaryedu.web.controllers.ResendVerificationEmailController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="resendVerificationEmail"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.EmailFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.EmailValidator"/>
+    	</property>
+    	<property name="formView" value="resendVerificationEmail"/>
+    	<property name="successView" value="resendVerificationEmailSuccess.htm"/>
+    </bean>
+    
+    <bean name="/forgotPassword.htm" class="com.binaryedu.web.controllers.ResendPasswordController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="resendPassword"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.EmailFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.EmailValidator"/>
+    	</property>
+    	<property name="formView" value="forgotPassword"/>
+    	<property name="successView" value="forgotPasswordSuccess.htm"/>
+    </bean>
+    
+    <bean name="/editProfile.htm" class="com.binaryedu.web.controllers.EditProfileController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="editProfile"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.ProfileFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.EditProfileValidator"/>
+    	</property>
+    	<property name="formView" value="editProfile"/>
+    	<property name="successView" value="profile.htm"/>
+    </bean>
+    
+    <bean name="/editPassword.htm" class="com.binaryedu.web.controllers.EditPasswordController">
+    	<property name="sessionForm" value="true"/>
+    	<property name="commandName" value="editPassword"/>
+    	<property name="commandClass" value="com.binaryedu.web.formobjects.PasswordFormObject"/>
+    	<property name="validator">
+    		<bean class="com.binaryedu.web.validators.EditPasswordValidator"/>
+    	</property>
+    	<property name="formView" value="editPassword"/>
+    	<property name="successView" value="profile.htm"/>
+    </bean>
+       
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+    	<property name="prefix" value="/WEB-INF/jsp/"></property>
+    	<property name="suffix" value=".jsp"></property>
+    </bean>
+	
+</beans>

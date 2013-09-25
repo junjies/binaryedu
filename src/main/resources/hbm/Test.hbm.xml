@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.binaryedu.business.model.impl.Test" table="test">
+		<id name="id" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property name="name" length="256"/>
+		
+		<property name="instructions">
+			<column name="instructions" sql-type="LONGTEXT"/>
+		</property>
+		
+		<property name="creationDate"/>
+		
+		<property name="available"/>
+		
+		<property name="numQuestions"/>
+		
+		<property name="marks"/>
+		
+		<property name="duration"/>
+		
+		<property name="negative"/>
+		
+		<property name="type"/>
+		
+		<join table="Test_XML">
+			<key column="ID"/>
+			
+			<property name="xmlText">
+				<column name="XML_TEXT" sql-type="LONGTEXT"/>
+			</property>
+		</join>
+	</class>
+	
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.binaryedu.business.model.impl">
+	<class name="TestResult" table="user_test">
+		<id name="id" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<many-to-one name="user" column="USER_ID" class="User"/>
+		
+		<many-to-one name="test" column="TEST_ID" class="Test"/>
+		
+		<property name="dateCompleted"/>
+		
+		<property name="percentage"/>
+		
+		<property name="percentile">
+			<column name="percentile"/>
+		</property>
+		
+		<property name="numQuestions"/>
+		
+		<property name="numAttemptedQuestions"/>
+		
+		<property name="numCorrectAnswers"/>
+		
+		<property name="answerXML">
+			<column name="answer_XML" sql-type="LONGTEXT"/>
+		</property>
+	</class>
+	
+</hibernate-mapping>
