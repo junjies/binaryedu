@@ -104,11 +104,13 @@ public class CommunicationService implements ICommunicationService
 		try
 		{
 			Properties props = new Properties();
-			props.setProperty("mail.transport.protocol", "smtp");
-			props.setProperty("mail.host", "s155.eatj.com");
-			props.setProperty("mail.user", "binaryedu");
-			props.setProperty("mail.password", "dhamaka123");
-			props.setProperty("mail.smtp.auth", "true");
+			props.put("mail.transport.protocol", "smtp");
+			props.put("mail.smtp.starttls.enable", "true");
+			props.put("mail.host", "smtp.gmail.com");
+			props.put("mail.smtp.port", "587");
+			props.put("mail.user", "binaryedu@gmail.com");
+			props.put("mail.password", "dhamaka123");
+			props.put("mail.smtp.auth", "true");
 
 			Authenticator auth = new SMTPAuthenticator();
 
@@ -142,12 +144,12 @@ public class CommunicationService implements ICommunicationService
 		}
 		catch (UnsupportedEncodingException e)
 		{
-			logger.error(e.getStackTrace());
+			logger.error("UnsupportedEncodingException", e);
 			throw new BinaryException(BinaryExceptionCodes.UNABLE_TO_SEND_EMAIL);
 		}
 		catch (MessagingException e)
 		{
-			logger.error(e.getStackTrace());
+			logger.error("MessagingException", e);
 			throw new BinaryException(BinaryExceptionCodes.UNABLE_TO_SEND_EMAIL);
 		}
 
@@ -200,5 +202,10 @@ public class CommunicationService implements ICommunicationService
 				"</tr>\r\n" + 
 				"</table>\r\n" + 
 				"</font>";
+	}
+	
+	public static void main(String[] args) throws BinaryException {
+		ICommunicationService service = CommunicationService.getInstance();
+		service.sendNewPassword("parambirs@gmail.com", "abc123");
 	}
 }
