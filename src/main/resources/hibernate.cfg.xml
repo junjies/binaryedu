@@ -7,16 +7,16 @@
 	<session-factory>
 		
 		<!-- Settings for heroku development -->
-		<!-- <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://ec2-54-227-251-13.compute-1.amazonaws.com:5432/d5rj59knurec48</property>
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://ec2-54-227-251-13.compute-1.amazonaws.com:5432/d5rj59knurec48ssl=true?username=ytaodpxzillxps&password=p8j0R2j4oplwngL-4RBGCNlUeN&sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
 		<property name="hibernate.connection.username">ytaodpxzillxps</property>
-		<property name="hibernate.connection.password">p8j0R2j4oplwngL-4RBGCNlUeN</property> -->
+		<property name="hibernate.connection.password">p8j0R2j4oplwngL-4RBGCNlUeN</property>
 		
 		<!-- Settings for local developmpent -->
-		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+		<!-- <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/myapp</property>
         <property name="hibernate.connection.username">scott</property>
-        <property name="hibernate.connection.password">tiger</property>
+        <property name="hibernate.connection.password">tiger</property> -->
 		
 		<property name="hibernate.connection.pool_size">10</property>
 		<property name="hibernate.jdbc.batch_size">0</property>
