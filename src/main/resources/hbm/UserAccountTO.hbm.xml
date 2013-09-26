@@ -4,7 +4,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.binaryedu.business.transferobject.UserAccountTO" table="User">
+	<class name="com.binaryedu.business.transferobject.UserAccountTO" table="BEUser">
 		<id name="id" type="long">
 			<generator class="native"/>
 		</id>
