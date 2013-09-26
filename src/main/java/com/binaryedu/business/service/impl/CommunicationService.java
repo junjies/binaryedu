@@ -106,9 +106,9 @@ public class CommunicationService implements ICommunicationService
 			Properties props = new Properties();
 			props.put("mail.transport.protocol", "smtp");
 			props.put("mail.smtp.starttls.enable", "true");
-			props.put("mail.host", "smtp.gmail.com");
+			props.put("mail.host", "smtp.live.com");
 			props.put("mail.smtp.port", "587");
-			props.put("mail.user", "binaryedu@gmail.com");
+			props.put("mail.user", "binaryedu@outlook.com");
 			props.put("mail.password", "dhamaka123");
 			props.put("mail.smtp.auth", "true");
 
@@ -164,7 +164,7 @@ public class CommunicationService implements ICommunicationService
 
 		public javax.mail.PasswordAuthentication getPasswordAuthentication()
 		{
-			String username = "binaryedu";
+			String username = "binaryedu@outlook.com";
 			String password = "dhamaka123";
 			return new javax.mail.PasswordAuthentication(username, password);
 		}
