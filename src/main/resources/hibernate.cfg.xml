@@ -8,7 +8,7 @@
 		
 		<!-- Settings for heroku development -->
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-		<property name="hibernate.connection.url">jdbc:postgresql://ec2-54-227-251-13.compute-1.amazonaws.com:5432/d5rj59knurec48ssl=true?username=ytaodpxzillxps&password=p8j0R2j4oplwngL-4RBGCNlUeN&sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
+		<property name="hibernate.connection.url">jdbc:postgresql://ec2-54-227-251-13.compute-1.amazonaws.com:5432/d5rj59knurec48?username=ytaodpxzillxps&password=p8j0R2j4oplwngL-4RBGCNlUeN;&sslfactory=org.postgresql.ssl.NonValidatingFactory</property>
 		<property name="hibernate.connection.username">ytaodpxzillxps</property>
 		<property name="hibernate.connection.password">p8j0R2j4oplwngL-4RBGCNlUeN</property>
 		
