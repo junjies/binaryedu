@@ -27,8 +27,7 @@ import com.binaryedu.exceptions.BinaryExceptionCodes;
 public class CommunicationService implements ICommunicationService
 {
 	protected final Log logger = LogFactory.getLog(this.getClass());
-	private final String URL = "http://binaryedu.com/";
-//	private final String URL = "http://binaryedu.com/beta";
+	private final String URL = "http://binaryedu.herokuapp.com/";
 //	private final String URL = "http://localhost:8080/BinaryEduWeb/";
 	
 	private static final ICommunicationService INSTANCE = new CommunicationService();
@@ -204,8 +203,8 @@ public class CommunicationService implements ICommunicationService
 				"</font>";
 	}
 	
-	public static void main(String[] args) throws BinaryException {
-		ICommunicationService service = CommunicationService.getInstance();
-		service.sendNewPassword("parambirs@gmail.com", "abc123");
-	}
+//	public static void main(String[] args) throws BinaryException {
+//		ICommunicationService service = CommunicationService.getInstance();
+//		service.sendNewPassword("parambirs@gmail.com", "abc123");
+//	}
 }
