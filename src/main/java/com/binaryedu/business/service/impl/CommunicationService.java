@@ -117,7 +117,7 @@ public class CommunicationService implements ICommunicationService
 			Transport transport = mailSession.getTransport();
 
 			MimeMessage message = new MimeMessage(mailSession);
-			InternetAddress fromAddress = new InternetAddress("admin@binaryedu.com");
+			InternetAddress fromAddress = new InternetAddress("binaryedu@outlook.com");
 			fromAddress.setPersonal("Binary Edu");
 			message.setFrom(fromAddress);
 			message.setSubject(subject);
