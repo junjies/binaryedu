@@ -33,6 +33,7 @@ public class StartTestController extends SimpleFormController
 		}
 		
 		long testID = Long.parseLong(request.getParameter("testID"));
+		logger.debug("testID = " + testID);
 		ITest test = ServiceManager.getTestService().getTestByID(testID);
 		HashMap<String, Object> model = new HashMap<String, Object>();
 		model.put("test", test);

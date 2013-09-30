@@ -11,6 +11,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -33,6 +37,7 @@ import com.binaryedu.data.dao.DAOFactory;
  */
 public class TestService implements ITestService
 {
+	protected final Log logger = LogFactory.getLog(this.getClass());
 	private static final ITestService INSTANCE = new TestService();
 
 	private TestService()
@@ -53,14 +58,15 @@ public class TestService implements ITestService
 	@Override
 	public List<ITest> getAllTests(String type)
 	{
-
 		return DAOFactory.getTestDAO().listAllTests(type);
 	}
 
 	@Override
 	public ITest getTestByID(long id)
 	{
-		return DAOFactory.getTestDAO().getTestByID(id);
+		ITest test = DAOFactory.getTestDAO().getTestByID(id);
+		logger.info("test: \n" + test);
+		return test;
 	}
 
 	@Override

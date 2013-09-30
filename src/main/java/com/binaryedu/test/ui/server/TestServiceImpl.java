@@ -6,6 +6,8 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.Date;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -24,19 +26,20 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
  */
 public class TestServiceImpl extends RemoteServiceServlet implements TestService
 {
-
+	private final static Logger logger = LoggerFactory.getLogger(TestServiceImpl.class);
+	
 	/* (non-Javadoc)
 	 * @see com.binaryedu.test.ui.client.TestService#getTestXML(java.lang.String)
 	 */
 	@Override
 	public String getTestXML(String testID)
 	{
-		String xml = "";
+//		String xml = "";
 //		try
 //		{
 //			// Open the file that is the first
 //			// command line parameter
-//			FileInputStream fstream = new FileInputStream("C:/Temp/Test.xml");
+//			FileInputStream fstream = new FileInputStream("/Users/parambir.singh/Downloads/Test15/CAT_Free_Test_07.xml");
 //			// Get the object of DataInputStream
 //			DataInputStream in = new DataInputStream(fstream);
 //			BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -55,9 +58,11 @@ public class TestServiceImpl extends RemoteServiceServlet implements TestService
 //			// Catch exception if any
 //			System.err.println("Error: " + e.getMessage());
 //		}
-
-		ITest test = ServiceManager.getTestService().getTestByID(Long.parseLong(testID));
+//		logger.error("XML: \n" + xml);
+//		return xml;
 		
+		ITest test = ServiceManager.getTestService().getTestByID(Long.parseLong(testID));
+		logger.info("Test: \n" + test);
 		return test.getXmlText();
 	}
 

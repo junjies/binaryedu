@@ -258,4 +258,16 @@ public class Test implements ITest
 		this.type = type;
 	}
 
+	@Override
+	public String toString() {
+		return "Test [id=" + id + ", name=" + name + ", sections=" + sections
+				+ ", subjects=" + subjects + ", exam=" + exam + ", available="
+				+ available + ", instructions=" + instructions
+				+ ", creationDate=" + creationDate + ", xmlText=" + xmlText
+				+ ", duration=" + duration + ", negative=" + negative
+				+ ", numQuestions=" + numQuestions + ", marks=" + marks
+				+ ", type=" + type + "]";
+	}
+
+	
 }
