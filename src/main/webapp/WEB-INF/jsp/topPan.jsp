@@ -3,16 +3,7 @@
 <%@page import="com.binaryedu.business.model.IUser"%>
 <div id="topNav">
 	<ul id="navlist">
-	<%
-		String ua = request.getHeader( "User-Agent" );
-		boolean isChrome = ( ua != null && ua.toLowerCase().indexOf( "chrome/" ) != -1 );
-		String msg = isChrome ? "Google Chrome doesn't display this site properly. Please try another browser" : "";
-		
-		if(isChrome){
-	%>
-		<li><span class="warning" style="font-weight: bold;"><%= msg %></span></li>
-		|
-	<%	}
+	<%	
 		if(!SessionUtil.isUserLoggedIn(session))
 		{%>
 		<li><a href="signup.htm">Sign Up</a></li>
