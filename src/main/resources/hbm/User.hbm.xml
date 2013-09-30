@@ -4,29 +4,29 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.binaryedu.business.model.impl">
-	<class name="User" table="User">
+	<class name="User" table="beuser">
 		<id name="id" type="long">
 			<generator class="native"/>
 		</id>
 		
 		<property name="email" type="java.lang.String" length="64">
-			<column name="EMAIL"/>
+			<column name="email"/>
 		</property>
 		
 		<property name="name" type="java.lang.String" length="64">
-			<column name="NAME"/>
+			<column name="name"/>
 		</property>
 			
 		<property name="gender" type="java.lang.String" length="1">
-			<column name="GENDER"/>
+			<column name="gender"/>
 		</property>
 		
 		<property name="dateOfBirth">
-			<column name="DATE_OF_BIRTH"/>
+			<column name="date_of_birth"/>
 		</property>
 		
 		<property name="phone" type="java.lang.String" length="32">
-			<column name="PHONE"/>
+			<column name="phone"/>
 		</property>
 	</class>
 	

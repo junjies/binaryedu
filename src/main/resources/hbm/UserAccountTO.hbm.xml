@@ -4,48 +4,48 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.binaryedu.business.transferobject.UserAccountTO" table="User">
+	<class name="com.binaryedu.business.transferobject.UserAccountTO" table="beuser">
 		<id name="id" type="long">
 			<generator class="native"/>
 		</id>
 		
 		<property name="email">
-			<column name="EMAIL" unique="true"/>
+			<column name="email" unique="true"/>
 		</property>
 		
 		<property name="fullName">
-			<column name="NAME"/>
+			<column name="name"/>
 		</property>
 		
 		<property name="gender">
-			<column name="GENDER"/>
+			<column name="gender"/>
 		</property>
 		
 		<property name="dateOfBirth">
-			<column name="DATE_OF_BIRTH"/>
+			<column name="date_of_birth"/>
 		</property>
 		
 		<property name="phone">
-			<column name="PHONE"/>
+			<column name="phone"/>
 		</property>
 		
 		<property name="active" type="boolean">
-			<column name="ACTIVE" sql-type="BOOLEAN"/>
+			<column name="active" sql-type="BOOLEAN"/>
 		</property>
 		
-		<join table="Login">
-			<key column="ID"/>
+		<join table="belogin">
+			<key column="id"/>
 			
 			<property name="password">
-				<column name="PASSWORD" length="64"/>
+				<column name="password" length="64"/>
 			</property>
 		</join>
 		
-		<join table="User_Activation">
-			<key column="ID"/>
+		<join table="beuser_activation">
+			<key column="id"/>
 			
 			<property name="activationKey">
-				<column name="ACTIVATION_KEY"/>
+				<column name="activation_key"/>
 			</property>
 		</join>
 	</class>

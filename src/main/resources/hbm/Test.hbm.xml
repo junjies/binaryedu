@@ -4,7 +4,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="com.binaryedu.business.model.impl.Test" table="test">
+	<class name="com.binaryedu.business.model.impl.Test" table="betest">
 		<id name="id" type="long">
 			<generator class="native"/>
 		</id>
@@ -12,7 +12,7 @@
 		<property name="name" length="256"/>
 		
 		<property name="instructions">
-			<column name="instructions" sql-type="LONGTEXT"/>
+			<column name="instructions" sql-type="text"/>
 		</property>
 		
 		<property name="creationDate"/>
@@ -29,11 +29,11 @@
 		
 		<property name="type"/>
 		
-		<join table="Test_XML">
-			<key column="ID"/>
+		<join table="betest_xml">
+			<key column="id"/>
 			
 			<property name="xmlText">
-				<column name="XML_TEXT" sql-type="LONGTEXT"/>
+				<column name="xml_text" sql-type="text"/>
 			</property>
 		</join>
 	</class>

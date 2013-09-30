@@ -4,14 +4,14 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="com.binaryedu.business.model.impl">
-	<class name="TestResult" table="user_test">
+	<class name="TestResult" table="beuser_test">
 		<id name="id" type="long">
 			<generator class="native"/>
 		</id>
 		
-		<many-to-one name="user" column="USER_ID" class="User"/>
+		<many-to-one name="user" column="user_id" class="User"/>
 		
-		<many-to-one name="test" column="TEST_ID" class="Test"/>
+		<many-to-one name="test" column="test_id" class="Test"/>
 		
 		<property name="dateCompleted"/>
 		
@@ -28,7 +28,7 @@
 		<property name="numCorrectAnswers"/>
 		
 		<property name="answerXML">
-			<column name="answer_XML" sql-type="LONGTEXT"/>
+			<column name="answer_xml" sql-type="text"/>
 		</property>
 	</class>
 	
