@@ -27,8 +27,7 @@ import com.binaryedu.exceptions.BinaryExceptionCodes;
 public class CommunicationService implements ICommunicationService
 {
 	protected final Log logger = LogFactory.getLog(this.getClass());
-	private final String URL = "http://binaryedu.s156.eatj.com/";
-//	private final String URL = "http://binaryedu.com/beta";
+	private final String URL = "http://binaryedu.herokuapp.com/";
 //	private final String URL = "http://localhost:8080/BinaryEduWeb/";
 	
 	private static final ICommunicationService INSTANCE = new CommunicationService();
@@ -104,11 +103,13 @@ public class CommunicationService implements ICommunicationService
 		try
 		{
 			Properties props = new Properties();
-			props.setProperty("mail.transport.protocol", "smtp");
-			props.setProperty("mail.host", "s155.eatj.com");
-			props.setProperty("mail.user", "binaryedu");
-			props.setProperty("mail.password", "dhamaka123");
-			props.setProperty("mail.smtp.auth", "true");
+			props.put("mail.transport.protocol", "smtp");
+			props.put("mail.smtp.starttls.enable", "true");
+			props.put("mail.host", "smtp.live.com");
+			props.put("mail.smtp.port", "587");
+			props.put("mail.user", "binaryedu@outlook.com");
+			props.put("mail.password", "dhamaka123");
+			props.put("mail.smtp.auth", "true");
 
 			Authenticator auth = new SMTPAuthenticator();
 
@@ -142,12 +143,12 @@ public class CommunicationService implements ICommunicationService
 		}
 		catch (UnsupportedEncodingException e)
 		{
-			logger.error(e.getStackTrace());
+			logger.error("UnsupportedEncodingException", e);
 			throw new BinaryException(BinaryExceptionCodes.UNABLE_TO_SEND_EMAIL);
 		}
 		catch (MessagingException e)
 		{
-			logger.error(e.getStackTrace());
+			logger.error("MessagingException", e);
 			throw new BinaryException(BinaryExceptionCodes.UNABLE_TO_SEND_EMAIL);
 		}
 
@@ -162,7 +163,7 @@ public class CommunicationService implements ICommunicationService
 
 		public javax.mail.PasswordAuthentication getPasswordAuthentication()
 		{
-			String username = "binaryedu";
+			String username = "binaryedu@outlook.com";
 			String password = "dhamaka123";
 			return new javax.mail.PasswordAuthentication(username, password);
 		}
@@ -202,8 +203,8 @@ public class CommunicationService implements ICommunicationService
 				"</font>";
 	}
 	
-	public static void main(String[] args) throws BinaryException {
-		ICommunicationService service = CommunicationService.getInstance();
-		service.sendNewPassword("parambirs@gmail.com", "abc123");
-	}
+//	public static void main(String[] args) throws BinaryException {
+//		ICommunicationService service = CommunicationService.getInstance();
+//		service.sendNewPassword("parambirs@gmail.com", "abc123");
+//	}
 }
