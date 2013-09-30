@@ -174,7 +174,7 @@ public class CommunicationService implements ICommunicationService
 		return  "<font face=\"'Trebuchet MS', Arial, Helvetica, Verdana, Sans-Serif\">\r\n" + 
 				"<table width=\"100%\" cellpadding=\"5\" cellspacing=\"0\">\r\n" + 
 				"<tr>\r\n" + 
-				"<td width=\"100%\" height=\"70\"><img src=\"http://binaryedu.com/images/logo_small.png\"/></td>\r\n" + 
+				"<td width=\"100%\" height=\"70\"><img src=\"http://binaryedu.herokuapp.com/images/logo_small.png\"/></td>\r\n" + 
 				"</tr>\r\n" + 
 				"<tr>\r\n" + 
 				"<td width=\"100%\" height=\"5\" bgcolor=\"#333333\"></td>\r\n" + 
